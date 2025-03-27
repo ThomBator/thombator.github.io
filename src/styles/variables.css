@@ -1,0 +1,72 @@
+:root {
+  /* Color variables */
+  --background-color: #f8f9fa; /* A soft, modern off-white */
+  --dark-color: #2c2c2c; /* A deep charcoal gray */
+  --darkest-color: #1a1a1a; /* Almost black for strong contrast */
+  --light-color: #e9ecef; /* A very light gray for subtle highlights */
+  --lightest-color: #ffffff; /* Pure white for clean accents */
+  --medium-color: #adb5bd; /* A neutral gray for balance */
+  --primary-color: linear-gradient(
+    135deg,
+    #495057 0%,
+    #6c757d 100%
+  ); /* A sleek gradient with modern gray tones */
+
+  /*Margin Variables*/
+  --margin-0: 0rem;
+  --margin-1: 0.25rem;
+  --margin-2: 0.5rem;
+  --margin-3: 1rem;
+  --margin-4: 1.5rem;
+  --margin-5: 2rem;
+  --margin-6: 2.5rem;
+  --margin-7: 3rem;
+  --margin-8: 4rem;
+  --margin-9: 6rem;
+  --margin-10: 8rem;
+
+  /*Padding Variables*/
+
+  --padding-0: 0rem;
+  --padding-1: 0.25rem;
+  --padding-2: 0.5rem;
+  --padding-3: 1rem;
+  --padding-4: 1.5rem;
+  --padding-5: 2rem;
+  --padding-6: 2.5rem;
+  --padding-7: 3rem;
+  --padding-8: 4rem;
+  --padding-9: 6rem;
+  --padding-10: 8rem;
+
+  /*Font-size variables*/
+  --font-xs: 0.8rem;
+  --font-s: 1.125rem;
+  --font-m: 1.5rem;
+  --font-l: 2rem;
+  --font-xl: 2.5rem;
+  --font-xxl: 3rem;
+
+  /*Font-weight variables*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* Box shadow variables */
+  --box-shadow-small: 2px 2px 4px var(--dark-color);
+  --box-shadow-medium: 4px 4px 8px var(--dark-color);
+  --box-shadow-large: 8px 8px 16px var(--dark-color);
+
+  /* Flexbox gap variables*/
+  --gap-0: 0rem;
+  --gap-1: 0.25rem;
+  --gap-2: 0.5rem;
+  --gap-3: 1rem;
+  --gap-4: 1.5rem;
+  --gap-5: 2rem;
+  --gap-6: 2.5rem;
+  --gap-7: 3rem;
+  --gap-8: 4rem;
+  --gap-9: 6rem;
+  --gap-10: 8rem;
+}

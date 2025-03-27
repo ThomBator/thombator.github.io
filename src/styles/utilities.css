@@ -1,0 +1,288 @@
+/* Margin Utilities */
+.m-0 {
+  margin: var(--margin-0);
+}
+.m-1 {
+  margin: var(--margin-1);
+}
+.m-2 {
+  margin: var(--margin-2);
+}
+.m-3 {
+  margin: var(--margin-3);
+}
+.m-4 {
+  margin: var(--margin-4);
+}
+.m-5 {
+  margin: var(--margin-5);
+}
+.m-6 {
+  margin: var(--margin-6);
+}
+.m-7 {
+  margin: var(--margin-7);
+}
+.m-8 {
+  margin: var(--margin-8);
+}
+.m-9 {
+  margin: var(--margin-9);
+}
+.m-10 {
+  margin: var(--margin-10);
+}
+
+.mt-0 {
+  margin-top: var(--margin-0);
+}
+.mt-1 {
+  margin-top: var(--margin-1);
+}
+.mt-2 {
+  margin-top: var(--margin-2);
+}
+.mt-3 {
+  margin-top: var(--margin-3);
+}
+.mt-4 {
+  margin-top: var(--margin-4);
+}
+.mt-5 {
+  margin-top: var(--margin-5);
+}
+.mt-6 {
+  margin-top: var(--margin-6);
+}
+.mt-7 {
+  margin-top: var(--margin-7);
+}
+.mt-8 {
+  margin-top: var(--margin-8);
+}
+.mt-9 {
+  margin-top: var(--margin-9);
+}
+
+.mt-10 {
+  margin-top: var(--margin-10);
+}
+
+.mb-1 {
+  margin-bottom: var(--margin-1);
+}
+.mb-2 {
+  margin-bottom: var(--margin-2);
+}
+.mb-3 {
+  margin-bottom: var(--margin-3);
+}
+.mb-4 {
+  margin-bottom: var(--margin-4);
+}
+.mb-5 {
+  margin-bottom: var(--margin-5);
+}
+.mb-6 {
+  margin-bottom: var(--margin-6);
+}
+.mb-7 {
+  margin-bottom: var(--margin-7);
+}
+.mb-8 {
+  margin-bottom: var(--margin-8);
+}
+.mb-9 {
+  margin-bottom: var(--margin-9);
+}
+.mb-10 {
+  margin-bottom: var(--margin-10);
+}
+
+/* Padding Utilities */
+.p-0 {
+  padding: var(--padding-0);
+}
+.p-1 {
+  padding: var(--padding-1);
+}
+.p-2 {
+  padding: var(--padding-2);
+}
+.p-3 {
+  padding: var(--padding-3);
+}
+.p-4 {
+  padding: var(--padding-4);
+}
+.p-5 {
+  padding: var(--padding-5);
+}
+.p-6 {
+  padding: var(--padding-6);
+}
+.p-7 {
+  padding: var(--padding-7);
+}
+
+.p-8 {
+  padding: var(--padding-8);
+}
+.p-9 {
+  padding: var(--padding-9);
+}
+.p-10 {
+  padding: var(--padding-10);
+}
+/* Repeat for padding-top, padding-right, padding-bottom, padding-left */
+
+/* Font Size Utilities */
+.font-xs {
+  font-size: var(--font-xs);
+}
+.font-s {
+  font-size: var(--font-s);
+}
+.font-m {
+  font-size: var(--font-m);
+}
+.font-l {
+  font-size: var(--font-l);
+}
+.font-xl {
+  font-size: var(--font-xl);
+}
+.font-xxl {
+  font-size: var(--font-xxl);
+}
+
+/* Font Weight Utilities */
+.font-regular {
+  font-weight: var(--font-regular);
+}
+.font-semi-bold {
+  font-weight: var(--font-semi-bold);
+}
+.font-bold {
+  font-weight: var(--font-bold);
+}
+
+/* Color Utilities */
+.bg-dark {
+  background-color: var(--dark-color);
+}
+.bg-darkest {
+  background-color: var(--darkest-color);
+}
+.bg-light {
+  background-color: var(--light-color);
+}
+.bg-lightest {
+  background-color: var(--lightest-color);
+}
+.bg-medium {
+  background-color: var(--medium-color);
+}
+.bg-primary {
+  background: var(--primary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+.text-darkest {
+  color: var(--darkest-color);
+}
+.text-light {
+  color: var(--light-color);
+}
+.text-lightest {
+  color: var(--lightest-color);
+}
+.text-medium {
+  color: var(--medium-color);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+
+/* Box Shadow Utilities */
+.shadow-small {
+  box-shadow: var(--box-shadow-small);
+}
+.shadow-medium {
+  box-shadow: var(--box-shadow-medium);
+}
+.shadow-large {
+  box-shadow: var(--box-shadow-large);
+}
+
+/* Flexbox Gap Utilities */
+.gap-0 {
+  gap: var(--gap-0);
+}
+.gap-1 {
+  gap: var(--gap-1);
+}
+.gap-2 {
+  gap: var(--gap-2);
+}
+.gap-3 {
+  gap: var(--gap-3);
+}
+.gap-4 {
+  gap: var(--gap-4);
+}
+.gap-5 {
+  gap: var(--gap-5);
+}
+.gap-6 {
+  gap: var(--gap-6);
+}
+.gap-7 {
+  gap: var(--gap-7);
+}
+.gap-8 {
+  gap: var(--gap-8);
+}
+.gap-9 {
+  gap: var(--gap-9);
+}
+.gap-10 {
+  gap: var(--gap-10);
+}
+
+/* Card Utilities */
+.card {
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: var(--box-shadow-medium);
+  flex: 1;
+  padding: var(--padding-4);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem); /* Subtle lift effect */
+  box-shadow: var(--box-shadow-large); /* Stronger shadow on hover */
+}
+
+.card-header {
+  font-size: var(--font-l);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--margin-2);
+}
+
+.card-body {
+  font-size: var(--font-s);
+  font-weight: var(--font-regular);
+  color: var(--medium-color);
+}
+
+.card-footer {
+  font-size: var(--font-xs);
+  font-weight: var(--font-semi-bold);
+  margin-top: var(--margin-3);
+  text-align: right;
+  color: var(--dark-color);
+}
