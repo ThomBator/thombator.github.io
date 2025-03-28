@@ -6,12 +6,13 @@
   --light-color: #e9ecef; /* A very light gray for subtle highlights */
   --lightest-color: #ffffff; /* Pure white for clean accents */
   --medium-color: #adb5bd; /* A neutral gray for balance */
-  --primary-color: linear-gradient(
-    135deg,
-    #495057 0%,
-    #6c757d 100%
-  ); /* A sleek gradient with modern gray tones */
-
+  --primary-color:   --background-color: #f8f9fa; /* A soft, modern off-white */
+  --dark-color: #2c2c2c; /* A deep charcoal gray */
+  --darkest-color: #1a1a1a; /* Almost black for strong contrast */
+  --light-color: #e9ecef; /* A very light gray for subtle highlights */
+  --lightest-color: #ffffff; /* Pure white for clean accents */
+  --medium-color: #adb5bd; /* A neutral gray for balance */
+  --primary-color:   #ffd700;
   /*Margin Variables*/
   --margin-0: 0rem;
   --margin-1: 0.25rem;

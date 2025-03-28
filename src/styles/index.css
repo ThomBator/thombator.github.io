@@ -8,22 +8,26 @@ body {
   color: var(--dark-color);
   font-size: var(--font-m);
   line-height: 1.6;
-  font-family: var(--font-primary);
+  font-family: Roboto, sans-serif;
   width: 100%;
   margin: 0;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-secondary);
+  font-family: Source Code Pro, serif;
+  letter-spacing: 0.05 rem;
+  font-weight: var(--font-normal);
   line-height: 1.3;
+  
 }
 
 p {
-  font-family: var(--font-primary);
+  font-family: Roboto, sans-serif;
   font-weight: var(--font-light);
   font-size: var(--font-s);
   line-height: 1.4;
@@ -37,11 +41,12 @@ header {
 
 .hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
+  gap: var(--gap-2);
 }
 .hero-image-container {
   width: 50%;
@@ -49,13 +54,15 @@ header {
 }
 
 .hero-image-container img {
-  width: 80%;
+  width: 100%; /* Ensure the image scales properly */
+  height: auto; /* Maintain aspect ratio */
+  
 }
 
 /*Main styles*/
 
 main {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -67,7 +74,7 @@ main {
 }
 
 .lets-talk {
-  color: var(--lightest-color);
+  color: var(--primary-color);
 }
 
 section {
@@ -75,34 +82,100 @@ section {
   padding: var(--padding-4);
 }
 
+.section-container {
+  width: 80%;
+  margin: auto;
+}
+
+/*Skills and Interests*/
+
 .skills-and-interests {
   display: flex;
   justify-content: center;
   gap: var(--gap-4);
 }
 
+.heading-with-icon {
+  display: flex;
+  align-items: center; /* Vertically align the emoji and text */
+  gap: var(--gap-2); /* Add spacing between the emoji and text */
+}
+
+.heading-with-icon .icon {
+  flex-shrink: 0; /* Prevent the emoji from shrinking */
+  font-size: 1.5rem; /* Adjust emoji size if needed */
+}
+
+.heading-with-icon + p {
+  margin-left: 2.75rem; /* Indent the paragraph to align with the text */
+}
+
+.heading-with-icon + p + ul {
+  margin-left: 2.75rem; /* Indent the list to align with the paragraph */
+  padding-left: 1rem; /* Adds padding to the left of the list */
+}
+
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: var(--font-xl);
+  }
+
+  h2 {
+    font-size: var(--font-l);
+  }
   .hero {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    gap: 0;
+  }
+
+  .hero-heading-container {
+    width: 100%;
+    padding-inline: var(--padding-5);
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .hero-image-container {
+    margin-top: 0;
+    padding-top: 0;
     width: 100%;
-    order: 1;
-    padding: 0;
   }
 
-  .hero-image-container img {
-    width: 100%;
-    padding: 0;
-  }
+
 
   main {
     width: 100%;
+  }
+  .section-container {
+    width: 100%;
+  }
+
+  .high-level-skills {
+    flex-direction: column; /* Stack the lists vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: var(--gap-2); /* Optional: Adds consistent spacing between the lists */
   }
 
   .skills-and-interests {
     flex-direction: column;
   }
+
+  .heading-with-icon {
+    flex-direction: column; /* Stack the emoji and text vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .heading-with-icon + p {
+    margin: var(--margin-2); /* Indent the paragraph to align with the text */
+  }
+
+  .heading-with-icon + p + ul {
+    margin-inline: 1.5rem; /* Indent the list to align with the paragraph *
+    padding-left: 0; /* Removes padding to align with the paragraph */
+  }
+
+  .heading-with-icon + p + ul li { 
+    margin-block: var(--margin-4)
 }
