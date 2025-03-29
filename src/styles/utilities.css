@@ -328,7 +328,6 @@
 .card {
   border-radius: 0.5rem; /* Rounded corners */
   box-shadow: var(--box-shadow-medium);
-  flex: 1;
   padding: var(--padding-4);
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -340,9 +339,11 @@
 }
 
 .card-header {
-  font-size: var(--font-l);
+  font-size: var(--font-s); /* Ensure font size is appropriate */
   font-weight: var(--font-bold);
   margin-bottom: var(--margin-2);
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word;
 }
 
 .card-body {
@@ -370,4 +371,45 @@
   .mobile-break {
     display: inline;
   }
+}
+
+/*Misc Utilities*/
+
+.zigzag {
+  width: 100%;
+  padding: var(--padding-3);
+  background-color: var(--dark-color);
+  position: relative;
+  clip-path: polygon(
+    0 95%,
+    15% 100%,
+    30% 95%,
+    45% 100%,
+    60% 95%,
+    75% 100%,
+    90% 95%,
+    100% 100%,
+    100% 0,
+    0 0
+  );
+}
+
+.curve {
+  position: relative;
+
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+}
+
+/* Pseudo-element to create the inverted half-moon curve */
+.curve::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Adjust to change the depth of the curve */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%23ffffff' d='M0,80 Q720,0 1440,80 L1440,0 L0,0 Z'/%3E%3C/svg%3E")
+    no-repeat bottom;
+  background-size: cover;
+  z-index: 1;
 }

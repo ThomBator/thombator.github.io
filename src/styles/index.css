@@ -3,6 +3,11 @@
 @import url("fonts.css");
 @import url("utilities.css");
 /* Global Styles */
+
+html {
+  font-size: 18px; /* Base font size increased for accessibility*/
+}
+
 body {
   background-color: var(--lightest-color);
   color: var(--dark-color);
@@ -23,7 +28,6 @@ h6 {
   letter-spacing: 0.05 rem;
   font-weight: var(--font-normal);
   line-height: 1.3;
-  
 }
 
 p {
@@ -33,6 +37,9 @@ p {
   line-height: 1.4;
 }
 
+li {
+  list-style: circle;
+}
 /*Header Styles*/
 header {
   background-color: var(--dark-color);
@@ -43,20 +50,188 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
   width: 80%;
   margin: auto;
   gap: var(--gap-2);
 }
+
+.hero-heading-container {
+  width: 50%;
+  padding: var(--padding-5);
+  margin-bottom: var(--margin-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-2);
+  flex: 1;
+}
 .hero-image-container {
   width: 50%;
   padding: var(--padding-5);
+  position: relative;
+  flex: 1;
 }
 
 .hero-image-container img {
   width: 100%; /* Ensure the image scales properly */
+  display: block;
   height: auto; /* Maintain aspect ratio */
-  
+}
+
+/*Snoring animation for hero image */
+
+/* Snore line animation */
+/* Vertical snore line with dotted style */
+.snore-line {
+  position: absolute;
+  bottom: 31%; /* Position near the dog's mouth */
+  left: 74%; /* Adjust as needed to position correctly */
+  width: 0; /* Set width to 0 since it's now vertical */
+  height: 1rem; /* Line length (was width before) */
+  border-left: 5px dotted white; /* Dotted line becomes vertical */
+}
+
+/* Updated snore animation */
+@keyframes snore-line {
+  0% {
+    transform: scaleY(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scaleY(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes snore-line {
+  0% {
+    transform: scaleY(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scaleY(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
+/* Zzzz animation */
+.zzzz {
+  position: absolute;
+  bottom: 35%;
+  left: 73%;
+  color: white;
+  font-size: var(--font-s);
+  font-family: "Delicious Handrawn", sans-serif;
+}
+
+@keyframes zzz-move {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  5% {
+    transform: translateY(-4px);
+    opacity: 0.95;
+  }
+  10% {
+    transform: translateY(-6px);
+    opacity: 0.9;
+  }
+  15% {
+    transform: translateY(-8px);
+    opacity: 0.85;
+  }
+  20% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-12px);
+    opacity: 0.75;
+  }
+  30% {
+    transform: translateY(-14px);
+    opacity: 0.7;
+  }
+  35% {
+    transform: translateY(-16px);
+    opacity: 0.65;
+  }
+  40% {
+    transform: translateY(-18px);
+    opacity: 0.6;
+  }
+  45% {
+    transform: translateY(-20px);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(-22px);
+    opacity: 0.5;
+  }
+  55% {
+    transform: translateY(-24px);
+    opacity: 0.45;
+  }
+  60% {
+    transform: translateY(-26px);
+    opacity: 0.4;
+  }
+  65% {
+    transform: translateY(-28px);
+    opacity: 0.35;
+  }
+  70% {
+    transform: translateY(-30px);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translateY(-32px);
+    opacity: 0.25;
+  }
+  80% {
+    transform: translateY(-34px);
+    opacity: 0.2;
+  }
+  85% {
+    transform: translateY(-36px);
+    opacity: 0.15;
+  }
+  90% {
+    transform: translateY(-38px);
+    opacity: 0.1;
+  }
+  95% {
+    transform: translateY(-40px);
+    opacity: 0.05;
+  }
+  100% {
+    transform: translateY(-42px);
+    opacity: 0;
+  }
+}
+
+.snore-line,
+.zzzz {
+  opacity: 0; /* Hide initially */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.snore-line.active {
+  opacity: 1;
+  animation: snore-line 2.5s ease-in-out;
+}
+
+.zzzz.active {
+  opacity: 1;
+  animation: zzz-move 2.5s ease-in-out;
 }
 
 /*Main styles*/
@@ -66,11 +241,19 @@ main {
   margin: 0 auto;
 }
 
+/*High-level skills styles */
+
 .high-level-skills {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start; /* Optional: Adds spacing between the lists */
-  gap: var(--gap-2); /* Optional: Adds consistent spacing between the lists */
+  gap: var(--gap-4); /* Optional: Adds consistent spacing between the lists */
   width: 100%; /* Ensure the container spans the full width */
+}
+
+.high-level-skills .card {
+  flex: 0 1 auto;
+  width: 18rem;
 }
 
 .lets-talk {
@@ -83,27 +266,27 @@ section {
 }
 
 .section-container {
-  width: 80%;
   margin: auto;
+  width: 80%;
 }
 
-/*Skills and Interests*/
+/*Skills section & Projects section */
 
-.skills-and-interests {
+.skills {
   display: flex;
-  justify-content: center;
   gap: var(--gap-4);
+  justify-content: center;
 }
 
 .heading-with-icon {
-  display: flex;
   align-items: center; /* Vertically align the emoji and text */
+  display: flex;
   gap: var(--gap-2); /* Add spacing between the emoji and text */
 }
 
 .heading-with-icon .icon {
-  flex-shrink: 0; /* Prevent the emoji from shrinking */
   font-size: 1.5rem; /* Adjust emoji size if needed */
+  flex-shrink: 0; /* Prevent the emoji from shrinking */
 }
 
 .heading-with-icon + p {
@@ -114,6 +297,8 @@ section {
   margin-left: 2.75rem; /* Indent the list to align with the paragraph */
   padding-left: 1rem; /* Adds padding to the left of the list */
 }
+
+/*Responsive styling*/
 
 @media screen and (max-width: 768px) {
   h1 {
@@ -143,10 +328,9 @@ section {
     width: 100%;
   }
 
-
-
   main {
     width: 100%;
+    position: relative;
   }
   .section-container {
     width: 100%;
@@ -154,11 +338,24 @@ section {
 
   .high-level-skills {
     flex-direction: column; /* Stack the lists vertically */
-    align-items: flex-start; /* Align items to the start */
+    align-items: center; /* Align items to the start */
     gap: var(--gap-2); /* Optional: Adds consistent spacing between the lists */
   }
 
-  .skills-and-interests {
+  .high-level-skills-main-header {
+    text-align: center;
+  }
+
+  .high-level-skills .card {
+    flex: 0 1 50%; /* Ensures 2 columns per row */
+  }
+
+  .high-level-skills-cta {
+    text-align: center;
+    margin-bottom: var(--margin-10);
+  }
+
+  .skills {
     flex-direction: column;
   }
 
@@ -176,6 +373,25 @@ section {
     padding-left: 0; /* Removes padding to align with the paragraph */
   }
 
-  .heading-with-icon + p + ul li { 
-    margin-block: var(--margin-4)
+  .heading-with-icon + p + ul li {
+    margin-block: var(--margin-4);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .high-level-skills {
+    flex-direction: column; /* Stack the lists vertically */
+    align-items: center; /* Align items to the start */
+    gap: var(--gap-2); /* Optional: Adds consistent spacing between the lists */
+  }
+
+  .high-level-skills .card {
+    flex: 0 1 50%; /* Ensures 2 columns per row */
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

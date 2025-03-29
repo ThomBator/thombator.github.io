@@ -17,6 +17,11 @@
     format("truetype");
 }
 
+@font-face {
+  font-family: "Delicious Handrawn";
+  src: url("/assets/fonts/Delicious_Handrawn/DeliciousHandrawn-Regular.ttf");
+}
+
 /* Utility Classes for Font Styling */
 .font-primary {
   font-family: "Roboto", sans-serif;

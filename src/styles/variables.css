@@ -13,6 +13,8 @@
   --lightest-color: #ffffff; /* Pure white for clean accents */
   --medium-color: #adb5bd; /* A neutral gray for balance */
   --primary-color:   #ffd700;
+
+
   /*Margin Variables*/
   --margin-0: 0rem;
   --margin-1: 0.25rem;
@@ -41,8 +43,8 @@
   --padding-10: 8rem;
 
   /*Font-size variables*/
-  --font-xs: 0.8rem;
-  --font-s: 1.125rem;
+  --font-xs: 1rem;
+  --font-s: 1.25rem;
   --font-m: 1.5rem;
   --font-l: 2rem;
   --font-xl: 2.5rem;
