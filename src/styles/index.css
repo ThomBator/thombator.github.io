@@ -273,6 +273,10 @@ section {
   width: 80%;
 }
 
+.sub-section {
+  margin-bottom: var(--margin-5); 
+}
+
 /*Skills section & Projects section */
 
 .skills {
@@ -288,7 +292,7 @@ section {
 }
 
 .heading-with-icon .icon {
-  font-size: 1.5rem; /* Adjust emoji size if needed */
+  font-size: var(--font-m); /* Adjust emoji size if needed */
   flex-shrink: 0; /* Prevent the emoji from shrinking */
 }
 
@@ -297,6 +301,7 @@ section {
 }
 
 .heading-with-icon + p + ul {
+  font-size: var(--font-s);
   margin-left: 2.75rem; /* Indent the list to align with the paragraph */
   padding-left: 1rem; /* Adds padding to the left of the list */
 }
@@ -349,7 +354,7 @@ section {
   .high-level-skills {
     flex-direction: column; /* Stack the lists vertically */
     align-items: center; /* Align items to the start */
-    gap: var(--gap-2); /* Optional: Adds consistent spacing between the lists */
+    gap: var(--gap-4); /* Optional: Adds consistent spacing between the lists */
   }
 
   .high-level-skills-main-header {
@@ -368,19 +373,23 @@ section {
   .heading-with-icon {
     flex-direction: column; /* Stack the emoji and text vertically */
     align-items: flex-start; /* Align items to the start */
+    margin-inline: var(--margin-0);
   }
 
   .heading-with-icon + p {
-    margin: var(--margin-2); /* Indent the paragraph to align with the text */
+    margin-inline: var(--margin-0);
+    margin-block: var(--margin-2);
+    * Indent the paragraph to align with the text */
   }
 
   .heading-with-icon + p + ul {
-    margin-inline: 1.5rem; /* Indent the list to align with the paragraph *
+    font-size: var(--font-xs);
+    margin-inline: var(--margin-2);
     padding-left: 0; /* Removes padding to align with the paragraph */
   }
 
   .heading-with-icon + p + ul li {
-    margin-block: var(--margin-4);
+    margin-block: var(--margin-2);
   }
 }
 
