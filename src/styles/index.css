@@ -250,7 +250,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; /* Optional: Adds spacing between the lists */
-  gap: var(--gap-4); /* Optional: Adds consistent spacing between the lists */
+  gap: var(--gap-3); /* Optional: Adds consistent spacing between the lists */
   width: 100%; /* Ensure the container spans the full width */
 }
 
@@ -301,7 +301,17 @@ section {
   padding-left: 1rem; /* Adds padding to the left of the list */
 }
 
-/*Responsive styling*/
+@media screen and (max-width: 1024px) {
+  .section-container {
+    width: 100%;
+    padding: var(--padding-1);
+    margin: var(--padding-1);
+  }
+
+  .high-level-skills .card {
+    flex: 0 1 calc(50% - var(--gap-3));
+  }
+}
 
 @media screen and (max-width: 768px) {
   h1 {
@@ -335,9 +345,6 @@ section {
     width: 100%;
     position: relative;
   }
-  .section-container {
-    width: 100%;
-  }
 
   .high-level-skills {
     flex-direction: column; /* Stack the lists vertically */
@@ -347,10 +354,6 @@ section {
 
   .high-level-skills-main-header {
     text-align: center;
-  }
-
-  .high-level-skills .card {
-    flex: 0 1 50%; /* Ensures 2 columns per row */
   }
 
   .high-level-skills-cta {
@@ -378,18 +381,6 @@ section {
 
   .heading-with-icon + p + ul li {
     margin-block: var(--margin-4);
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .high-level-skills {
-    flex-direction: column; /* Stack the lists vertically */
-    align-items: center; /* Align items to the start */
-    gap: var(--gap-2); /* Optional: Adds consistent spacing between the lists */
-  }
-
-  .high-level-skills .card {
-    flex: 0 1 50%; /* Ensures 2 columns per row */
   }
 }
 
