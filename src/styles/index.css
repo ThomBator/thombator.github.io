@@ -221,16 +221,19 @@ header {
 .snore-line,
 .zzzz {
   opacity: 0; /* Hide initially */
+  visibility: hidden; /* Hide from screen readers */
   transition: opacity 0.3s ease-in-out;
 }
 
 .snore-line.active {
   opacity: 1;
+  visibility: visible;
   animation: snore-line 2.5s ease-in-out;
 }
 
 .zzzz.active {
   opacity: 1;
+  visibility: visible;
   animation: zzz-move 2.5s ease-in-out;
 }
 
