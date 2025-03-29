@@ -40,6 +40,11 @@ p {
 li {
   list-style: circle;
 }
+
+a {
+  cursor: pointer;
+}
+
 /*Header Styles*/
 header {
   background-color: var(--dark-color);
@@ -264,7 +269,7 @@ main {
 }
 
 section {
-  margin-bottom: var(--margin-4);
+  margin-bottom: var(--margin-0);
   padding: var(--padding-4);
 }
 
@@ -274,7 +279,7 @@ section {
 }
 
 .sub-section {
-  margin-bottom: var(--margin-5); 
+  margin-bottom: var(--margin-5);
 }
 
 /*Skills section & Projects section */
@@ -304,6 +309,21 @@ section {
   font-size: var(--font-s);
   margin-left: 2.75rem; /* Indent the list to align with the paragraph */
   padding-left: 1rem; /* Adds padding to the left of the list */
+}
+
+.project-links {
+  display: flex;
+  gap: var(--gap-4);
+  justify-content: flex-start;
+  margin-left: 2.75rem; /* Indent the list to align with the paragraph */
+  padding-left: 1rem; /* Adds padding to the left of the list */
+}
+
+.project-links a {
+  color: var(--lightest-color);
+  font-family: Source Code Pro, serif;
+  font-weight: var(--font-semi-bold);
+  font-size: var(--font-s);
 }
 
 @media screen and (max-width: 1024px) {
@@ -379,7 +399,6 @@ section {
   .heading-with-icon + p {
     margin-inline: var(--margin-0);
     margin-block: var(--margin-2);
-    * Indent the paragraph to align with the text */
   }
 
   .heading-with-icon + p + ul {
@@ -390,6 +409,15 @@ section {
 
   .heading-with-icon + p + ul li {
     margin-block: var(--margin-2);
+  }
+
+  .project-links {
+    margin-inline: var(--margin-2);
+    padding-left: 0;
+  }
+
+  .project-links a {
+    font-size: var(--font-xs);
   }
 }
 
