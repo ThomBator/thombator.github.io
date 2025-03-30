@@ -1,9 +1,4 @@
 /* Import Google Fonts */
-@font-face {
-  font-family: "Playfair Display";
-  src: url("/assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
-    format("truetype");
-}
 
 @font-face {
   font-family: "Roboto";
@@ -23,15 +18,12 @@
 }
 
 /* Utility Classes for Font Styling */
+
 .font-primary {
   font-family: "Roboto", sans-serif;
 }
 
 .font-secondary {
-  font-family: "Playfair Display", serif;
-}
-
-.font-tertiary {
   font-family: "Source Sans Pro", sans-serif;
 }
 
